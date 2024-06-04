@@ -22,7 +22,6 @@ public class SolveNQueens {
 
     /**
      * grid中，已被皇后占用，赋值为1
-     * 不可被占用，赋值为-1
      * 可被占用，为0
      */
     private void dfs(List<List<String>> res, int[][] grid, int row) {
