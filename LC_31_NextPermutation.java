@@ -12,7 +12,7 @@ import java.util.Arrays;
  * 而 arr = [3,2,1] 的下一个排列是 [1,2,3] ，因为 [3,2,1] 不存在一个字典序更大的排列。
  * 必须 原地 修改，只允许使用额外常数空间。
  */
-public class LT_31_NextPermutation {
+public class LC_31_NextPermutation {
 
     public void nextPermutation(int[] nums) {
         int i = nums.length - 2;
@@ -45,7 +45,7 @@ public class LT_31_NextPermutation {
     }
 
     public static void main(String[] args) {
-        LT_31_NextPermutation np = new LT_31_NextPermutation();
+        LC_31_NextPermutation np = new LC_31_NextPermutation();
         int[] nums = new int[]{1, 2, 3};
         np.nextPermutation(nums);
         System.out.println(Arrays.toString(nums));
