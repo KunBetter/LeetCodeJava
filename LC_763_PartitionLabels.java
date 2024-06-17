@@ -32,4 +32,30 @@ public class LC_763_PartitionLabels {
 
         return res;
     }
+
+    public List<Integer> partitionLabels2(String s) {
+        int[] word = new int[26];
+        List<Integer> result = new ArrayList<>();
+
+        char[] charArray = s.toCharArray();
+
+        for (int i = 0; i < charArray.length; i++) {
+            word[charArray[i] - 'a'] = i;
+        }
+
+        int lastP = -1, maxP = 0;
+
+        for (int i = 0; i < charArray.length; i++) {
+            if (maxP < word[charArray[i] - 'a']) {
+                maxP = word[charArray[i] - 'a'];
+            }
+
+            if (i == maxP) {
+                result.add(maxP - lastP);
+                lastP = maxP;
+            }
+        }
+
+        return result;
+    }
 }
