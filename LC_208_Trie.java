@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class LC_208_Trie {
 
-    class TrieNode {
+    static class TrieNode {
         public char a = Character.MIN_VALUE;
         public boolean beWord = false;
         public Map<Character, TrieNode> next = new HashMap<>();
