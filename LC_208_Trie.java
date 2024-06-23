@@ -10,7 +10,6 @@ import java.util.Map;
 public class LC_208_Trie {
 
     static class TrieNode {
-        public char a = Character.MIN_VALUE;
         public boolean beWord = false;
         public Map<Character, TrieNode> next = new HashMap<>();
     }
@@ -32,7 +31,6 @@ public class LC_208_Trie {
 
             if (!node.next.containsKey(a)) {
                 TrieNode newNode = new TrieNode();
-                newNode.a = a;
                 newNode.beWord = false;
                 node.next.put(a, newNode);
             }
