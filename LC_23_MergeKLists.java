@@ -70,6 +70,7 @@ public class LC_23_MergeKLists {
             return lists[left];
         }
 
+        // 加速
         if (left + 1 == right) {
             return merge2Lists(lists[left], lists[right]);
         }
