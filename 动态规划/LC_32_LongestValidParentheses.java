@@ -29,5 +29,9 @@ public class LC_32_LongestValidParentheses {
         String s = ")()())";
         int len = vp.longestValidParentheses(s);
         System.out.println(len);
+
+        s = ")()(()))";
+        len = vp.longestValidParentheses(s);
+        System.out.println(len);
     }
 }
