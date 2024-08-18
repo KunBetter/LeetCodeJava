@@ -8,6 +8,8 @@ import java.util.Map;
  * 请你设计并实现一个满足LRU (最近最少使用) 缓存约束的数据结构。
  */
 public class LC_146_LRUCache {
+
+    // 双向链表节点
     class DLinkedNode {
         int key;
         int value;
@@ -23,9 +25,9 @@ public class LC_146_LRUCache {
         }
     }
 
-    private Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
+    private final Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
     private int size;
-    private int capacity;
+    private final int capacity;
     private DLinkedNode head, tail;
 
     public LC_146_LRUCache(int capacity) {
